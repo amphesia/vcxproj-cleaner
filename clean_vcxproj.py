@@ -36,7 +36,7 @@ def find_and_clean_vcxproj(start_path):
 if __name__ == "__main__":
     if not is_admin():
         print("Please run this script as Administrator to access all files.")
-        exit(1)
+        os.system("pause")
 
     print("Scanning for .vcxproj files and removing RAT commands...\n")
     for drive_letter in 'CDEFGHIJKLMNOPQRSTUVWXYZ':
