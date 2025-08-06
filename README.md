@@ -22,7 +22,7 @@ Run the script using Python with Administrator rights:
 
 If you use Visual Studio for C++ projects, this script cleans your `.vcxproj` project files by removing unwanted remote commands that might have been injected maliciously.
 
-Simply run the Python script before building your projects to ensure no malicious commands remain.
+Simply create a new project in Visual Studio and paste clean_vcxproj.cpp into your main.cpp, make sure its c++ v17.
 
 ---
 
