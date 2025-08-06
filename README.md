@@ -16,7 +16,7 @@ This script scans `.vcxproj` files on your computer to find and remove suspiciou
 
 Run the script using Python with Administrator rights:
 
-`python remove_rat.py`
+`python clean_vcxproj.py`
 
 ### C++
 
