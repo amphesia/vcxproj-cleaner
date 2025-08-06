@@ -27,7 +27,7 @@ def remove_rat_from_file(file_path):
         print(f"[ERROR]   {file_path} - {e}")
 
 def find_and_clean_vcxproj(start_path):
-    for root, dirs, files in os.walk(start_path, errors='ignore'):
+    for root, dirs, files in os.walk(start_path):
         for file in files:
             if file.endswith(".vcxproj"):
                 file_path = os.path.join(root, file)
