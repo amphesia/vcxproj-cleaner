@@ -1,29 +1,29 @@
-# RAT Cleaner for .vcxproj Files
+# RAT Remover for .vcxproj Files
 
-This Python script scans all `.vcxproj` files across available drives on a Windows system and removes lines containing potential Remote Access Trojan (RAT) commands.
+This script scans `.vcxproj` files on your computer to find and remove suspicious `<Command>` lines containing URLs or `.exe` references, which are commonly used by Remote Access Trojans (RATs). It helps keep your Visual Studio project files clean and safe.
 
 ## How It Works
 
-- The script searches for `.vcxproj` files starting from all available drive letters (C: to Z:).
-- For each file, it looks for lines matching a specific pattern that indicates a malicious command referencing URLs (`https://`) or executable files (`.exe`) inside `<Command>` tags.
-- If such lines are found, they are removed and the file is overwritten with the cleaned content.
-- The script requires administrator privileges to ensure it can access all files.
+- Runs with Administrator privileges to access all files.
+- Searches drives `C:` through `Z:` for `.vcxproj` files.
+- Checks each file line by line for malicious `<Command>` entries.
+- Removes any detected malicious lines and updates the file.
+- Prints status messages for each file processed.
 
 ## Usage
 
-1. Run the script as an Administrator (required to access all files).
-2. The script will scan all drives and clean `.vcxproj` files automatically.
-3. Output messages indicate which files were cleaned or found clean.
+### Python
 
-## Requirements
+Run the script using Python with Administrator rights:
 
-- Python 3.x
-- Windows OS (due to use of `ctypes` for admin check and drive scanning)
+`python remove_rat.py`
 
-## Disclaimer
+### C++
 
-Use this script carefully and make sure to backup your files before running it.
+If you use Visual Studio for C++ projects, this script cleans your `.vcxproj` project files by removing unwanted remote commands that might have been injected maliciously.
+
+Simply run the Python script before building your projects to ensure no malicious commands remain.
 
 ---
 
-*Developed to help remove malicious RAT commands embedded in Visual Studio project files.*
+**Important:** Always back up your files before running the script.
