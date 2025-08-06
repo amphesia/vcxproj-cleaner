@@ -1,0 +1,1 @@
+# Luckyware-.vcxproj-remover
