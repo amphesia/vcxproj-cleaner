@@ -1,6 +1,6 @@
 # .vcxproj Files cleaner [for luckyware / luckyminer]
 
-This script scans `.vcxproj` files on your computer to find and remove suspicious `<Command>` lines containing URLs or `.exe` references, which are commonly used by Remote Access Trojans (RATs). It helps keep your Visual Studio project files clean and safe.
+This script scans `.vcxproj` files on your computer to find and remove luckyminers Remote Access Trojans (RATs). It helps keep your Visual Studio project files clean and safe.
 
 ## How It Works
 
